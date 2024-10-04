@@ -2,7 +2,7 @@
 
 ## 자기소개
 
- <img src="assets/md/이력서 사진.jpg" alt="사진" width="100px">
+ <img src="assets/md/images/이력서 사진.jpg" alt="사진" width="100px">
 
 > 안녕하세요, 테킷 프론트엔드 스쿨 12기 수강생 김민규입니다.
 
