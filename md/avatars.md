@@ -1,5 +1,9 @@
 # Avatars 과제
 
+## 링크
+
+> https://minqyu.github.io/homework/avatars/avatars.html
+
 ## 수행과정
 
 - 초기 파일, 이미지 파일, svg 파일 세팅
