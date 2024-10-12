@@ -1,1 +1,197 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+@import "../../assets/common/a11y.css";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+body {
+  --default-font-size: 1rem;
+  --default-font-color: #121212;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+a {
+  appearance: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand {
+  width: 230px;
+  margin: 0;
+  a,
+  img {
+    display: block;
+  }
+}
+
+.login-button {
+  all: unset;
+  block-size: 2.8125rem;
+  inline-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--default-font-size);
+  font-weight: 600;
+  color: #fff;
+  background-color: #03cf5d;
+  cursor: pointer;
+}
+
+.login-form__checkbox {
+  inline-size: 7.8125rem;
+  block-size: 1.5625rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+
+  input[type="checkbox"] {
+    appearance: none;
+    margin: 0 0.3125rem 0 0;
+    background-image: url("../../assets/login/unchecked.svg");
+    background-size: 24px 24px;
+    inline-size: 24px;
+    block-size: 24px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+  }
+
+  input[type="checkbox"]:checked {
+    background-image: url("../../assets/login/checked.svg");
+  }
+
+  label {
+    margin: 0 !important;
+    white-space: nowrap;
+    flex-grow: 1;
+    line-height: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.login-form {
+  inline-size: 100%;
+  block-size: 222px;
+  box-sizing: border-box;
+
+  .login-form__field {
+    font-size: var(--default-font-size);
+    color: var(--default-font-color);
+    font-size: 0.875rem;
+    inline-size: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .login-form__input {
+      inline-size: 100%;
+      block-size: 45px;
+      box-sizing: border-box;
+      border: 1px solid #dadada;
+      background-color: #fff;
+      padding-left: 0.9375rem;
+    }
+    .login-form__input:focus {
+      border-color: #03cf5d;
+      background-color: #e9f0fd;
+      outline: none;
+    }
+    .error-message {
+      display: none;
+      color: #ff1414;
+      font-size: 0.75rem;
+      margin-top: 0.4375rem;
+    }
+  }
+}
+
+.login-form__ip-security {
+  inline-size: 4.875rem;
+  block-size: 1.125rem;
+  font-size: var(--default-font-size);
+  color: var(--default-font-color);
+  display: none;
+  white-space: nowrap;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    margin: 0 !important;
+    cursor: pointer;
+  }
+
+  label::after {
+    margin-left: 8px;
+    content: "OFF";
+    color: #999999;
+    font-weight: bold;
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    content: "ON";
+    color: #03cf5d;
+  }
+}
+
+.login-container {
+  --min-container-width: 390px;
+  --max-container-width: 480px;
+  inline-size: 100%;
+  block-size: 480px;
+  min-inline-size: var(--min-container-width);
+  max-inline-size: var(--max-container-width);
+  padding: 0 1.25rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  .brand {
+    margin-top: 4.375rem;
+    flex: 0 0 auto;
+  }
+
+  .login-form {
+    margin-top: 2.8125rem;
+    position: relative;
+    .login-form__field {
+      flex: 1;
+    }
+  }
+
+  .login-form :nth-child(2) {
+    margin-top: 0.625rem;
+  }
+
+  .login-button {
+    margin-top: 1.25rem;
+  }
+
+  .login-form__checkbox {
+    margin-top: 0.625rem;
+    position: absolute;
+    right: 0;
+  }
+
+  .login-form__ip-security {
+    margin-top: 0.625rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-container {
+    inline-size: 500px;
+  }
+
+  .login-form__ip-security {
+    display: flex;
+  }
+}
