@@ -183,6 +183,7 @@ a {
 
   .login-form__ip-security {
     margin-top: 0.625rem;
+    position: absolute;
   }
 }
 
@@ -191,7 +192,12 @@ a {
     inline-size: 500px;
   }
 
+  .login-form__checkbox {
+    left: 0;
+  }
+
   .login-form__ip-security {
     display: flex;
+    right: 10px;
   }
 }
